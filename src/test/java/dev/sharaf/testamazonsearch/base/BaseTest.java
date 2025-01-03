@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Base test class for all test classes. This class provides common methods for all test classes.
@@ -175,6 +176,14 @@ public class BaseTest {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    /**
+     * This method adds wait in seconds for the web element to be visible.
+     * @param seconds time in seconds to wait for the web element to be visible.
+     */
+    public void addImplicitlyWait(int seconds) {
+        driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
     }
 
     /**

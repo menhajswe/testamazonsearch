@@ -23,6 +23,7 @@ public class Search extends BaseTest {
      */
     public void search(By searchBoxLocator, String targetValue) {
         WebElement searchBoxElement = find(searchBoxLocator);
+        searchBoxElement.clear();
         searchBoxElement.sendKeys(targetValue);
         searchBoxElement.submit();
     }
@@ -48,4 +49,3 @@ public class Search extends BaseTest {
         return element.getText();
     }
 }
-// mvnw.cmd

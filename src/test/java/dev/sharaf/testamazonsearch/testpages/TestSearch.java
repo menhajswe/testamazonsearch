@@ -2,10 +2,11 @@ package dev.sharaf.testamazonsearch.testpages;
 
 import dev.sharaf.testamazonsearch.pages.Search;
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class TestSearch {
     final String amazonSearchLocator = "//*[ @id=\"twotabsearchtextbox\" or @id=\"nav-bb-search\" or ( @role=\"searchbox\" or @placeholder=\"Search Amazon\" or @id=\"search-field\" ) ]";
